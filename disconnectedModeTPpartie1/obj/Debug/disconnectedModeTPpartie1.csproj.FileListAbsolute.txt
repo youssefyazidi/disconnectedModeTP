@@ -1,0 +1,10 @@
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\bin\Debug\disconnectedModeTPpartie1.exe.config
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\bin\Debug\disconnectedModeTPpartie1.exe
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\bin\Debug\disconnectedModeTPpartie1.pdb
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.csprojResolveAssemblyReference.cache
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.Form1.resources
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.Properties.Resources.resources
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.csproj.GenerateResource.Cache
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.exe
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.pdb
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.Form2.resources
