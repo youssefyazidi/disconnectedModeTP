@@ -19,6 +19,7 @@ namespace disconnectedModeTPpartie1
         //le pont : l'adapter
         static  SqlDataAdapter livreAdapter = new SqlDataAdapter();
         static SqlDataAdapter   themeAdapter = new SqlDataAdapter();
+        static SqlDataAdapter adherentAdapter = new SqlDataAdapter();
         public static DataSet getDataSet() 
         {
             if (ds == null)
@@ -32,10 +33,11 @@ namespace disconnectedModeTPpartie1
                 livreAdapter.SelectCommand = CmdSelect;*/
                 livreAdapter = new SqlDataAdapter("SELECT * FROM Livre", con);
                 themeAdapter = new SqlDataAdapter("SELECT * FROM Theme", con);
+                adherentAdapter = new SqlDataAdapter("SELECT * FROM Adherent", con);
                 //Ramener les données à partir de la base d'origine
                 livreAdapter.Fill(ds, "Livre");
                 themeAdapter.Fill(ds, "Theme");
-
+                adherentAdapter.Fill(ds, "Adherent");
                 //On définit les primary key
                 DataColumn[] cols_L = { ds.Tables["Livre"].Columns["CodeL"] };
                 ds.Tables["Livre"].PrimaryKey = cols_L;

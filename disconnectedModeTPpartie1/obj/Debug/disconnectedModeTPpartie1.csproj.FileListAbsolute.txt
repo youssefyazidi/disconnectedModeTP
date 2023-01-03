@@ -9,3 +9,4 @@ C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedM
 C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.pdb
 C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.Form2.resources
 C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.Form3.resources
+C:\Users\YAZIDI\Desktop\Projets CDS 2022\disconnectedModeTPpartie1\disconnectedModeTPpartie1\obj\Debug\disconnectedModeTPpartie1.Form4.resources
