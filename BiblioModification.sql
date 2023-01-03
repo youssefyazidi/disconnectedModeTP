@@ -17,3 +17,14 @@ Insert INTO Theme VALUES ('Physique')
 Insert INTO Theme VALUES ('Informatique')
 
 SELECT * FROM Theme
+
+DROP TABLE Adherent
+GO
+CREATE TABLE Adherent 
+(
+CodeA INT PRIMARY KEY IDENTITY, 
+NomA VARCHAR(80), 
+Adresse VARCHAR(100), 
+DateInscription Datetime
+)
+GO
