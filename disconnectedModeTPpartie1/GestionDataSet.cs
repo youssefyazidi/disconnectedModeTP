@@ -17,7 +17,8 @@ namespace disconnectedModeTPpartie1
         //la base locale
         private static DataSet ds;
         //le pont : l'adapter
-        static  SqlDataAdapter da = new SqlDataAdapter();
+        static  SqlDataAdapter livreAdapter = new SqlDataAdapter();
+        static SqlDataAdapter   themeAdapter = new SqlDataAdapter();
         public static DataSet getDataSet() 
         {
             if (ds == null)
@@ -26,11 +27,24 @@ namespace disconnectedModeTPpartie1
                 con.ConnectionString =
                   @"Data Source=.\SQLEXPRESS;Initial Catalog=Biblio;Integrated Security=true";
 
-                CmdSelect.CommandText = "Select * From Livre";
+                /*CmdSelect.CommandText = "Select * From Livre";
                 CmdSelect.Connection = con;
-                da.SelectCommand = CmdSelect;
+                livreAdapter.SelectCommand = CmdSelect;*/
+                livreAdapter = new SqlDataAdapter("SELECT * FROM Livre", con);
+                themeAdapter = new SqlDataAdapter("SELECT * FROM Theme", con);
                 //Ramener les données à partir de la base d'origine
-                da.Fill(ds, "Livre");
+                livreAdapter.Fill(ds, "Livre");
+                themeAdapter.Fill(ds, "Theme");
+
+                //On définit les primary key
+                DataColumn[] cols_L = { ds.Tables["Livre"].Columns["CodeL"] };
+                ds.Tables["Livre"].PrimaryKey = cols_L;
+                DataColumn[] cols_Th = { ds.Tables["Theme"].Columns["CodeTh"] };
+                ds.Tables["Theme"].PrimaryKey = cols_Th;
+                //On definit les cles étrangères
+                DataRelation drel = new DataRelation("Theme-Livre",
+                ds.Tables["Theme"].Columns["CodeTh"],
+                ds.Tables["Livre"].Columns["CodeTh"]);
             }
            return ds;
         }

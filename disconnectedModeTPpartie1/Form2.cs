@@ -36,7 +36,7 @@ namespace disconnectedModeTPpartie1
         {
             if (comboBoxAuteurs.SelectedIndex != -1)
             {
-            gestionDataSet.ds.Tables["Livre"].DefaultView.RowFilter 
+            ds.Tables["Livre"].DefaultView.RowFilter 
                     = "Auteur ='" + comboBoxAuteurs.Text + "'";
            }
         }
