@@ -40,21 +40,22 @@
             this.buttonModifier = new System.Windows.Forms.Button();
             this.buttonSupprimer = new System.Windows.Forms.Button();
             this.buttonRechercher = new System.Windows.Forms.Button();
-            this.buttonQuitter = new System.Windows.Forms.Button();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
             this.Rechercher = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBoxCodeRechercher = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.buttonfirst = new System.Windows.Forms.Button();
             this.buttonPrevious = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonLast = new System.Windows.Forms.Button();
+            this.buttonEnregistrer = new System.Windows.Forms.Button();
             this.Rechercher.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 67);
+            this.label2.Location = new System.Drawing.Point(48, 59);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 15);
@@ -64,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 114);
+            this.label1.Location = new System.Drawing.Point(48, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 15);
@@ -74,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 161);
+            this.label3.Location = new System.Drawing.Point(48, 153);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 15);
@@ -84,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 209);
+            this.label4.Location = new System.Drawing.Point(48, 201);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 15);
@@ -93,21 +94,21 @@
             // 
             // textBoxCode
             // 
-            this.textBoxCode.Location = new System.Drawing.Point(199, 64);
+            this.textBoxCode.Location = new System.Drawing.Point(199, 56);
             this.textBoxCode.Name = "textBoxCode";
             this.textBoxCode.Size = new System.Drawing.Size(162, 21);
             this.textBoxCode.TabIndex = 5;
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Location = new System.Drawing.Point(199, 108);
+            this.textBoxNom.Location = new System.Drawing.Point(199, 100);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(162, 21);
             this.textBoxNom.TabIndex = 6;
             // 
             // textBoxAdresse
             // 
-            this.textBoxAdresse.Location = new System.Drawing.Point(199, 155);
+            this.textBoxAdresse.Location = new System.Drawing.Point(199, 147);
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(162, 21);
             this.textBoxAdresse.TabIndex = 7;
@@ -115,14 +116,14 @@
             // dateTimePickerInscription
             // 
             this.dateTimePickerInscription.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerInscription.Location = new System.Drawing.Point(199, 203);
+            this.dateTimePickerInscription.Location = new System.Drawing.Point(199, 195);
             this.dateTimePickerInscription.Name = "dateTimePickerInscription";
             this.dateTimePickerInscription.Size = new System.Drawing.Size(162, 21);
             this.dateTimePickerInscription.TabIndex = 8;
             // 
             // buttonNouveau
             // 
-            this.buttonNouveau.Location = new System.Drawing.Point(430, 59);
+            this.buttonNouveau.Location = new System.Drawing.Point(430, 51);
             this.buttonNouveau.Name = "buttonNouveau";
             this.buttonNouveau.Size = new System.Drawing.Size(159, 23);
             this.buttonNouveau.TabIndex = 9;
@@ -132,21 +133,23 @@
             // 
             // buttonModifier
             // 
-            this.buttonModifier.Location = new System.Drawing.Point(430, 114);
+            this.buttonModifier.Location = new System.Drawing.Point(430, 106);
             this.buttonModifier.Name = "buttonModifier";
             this.buttonModifier.Size = new System.Drawing.Size(159, 23);
             this.buttonModifier.TabIndex = 10;
             this.buttonModifier.Text = "Modifier";
             this.buttonModifier.UseVisualStyleBackColor = true;
+            this.buttonModifier.Click += new System.EventHandler(this.buttonModifier_Click);
             // 
             // buttonSupprimer
             // 
-            this.buttonSupprimer.Location = new System.Drawing.Point(430, 175);
+            this.buttonSupprimer.Location = new System.Drawing.Point(430, 166);
             this.buttonSupprimer.Name = "buttonSupprimer";
             this.buttonSupprimer.Size = new System.Drawing.Size(159, 23);
             this.buttonSupprimer.TabIndex = 11;
             this.buttonSupprimer.Text = "Supprimer";
             this.buttonSupprimer.UseVisualStyleBackColor = true;
+            this.buttonSupprimer.Click += new System.EventHandler(this.buttonSupprimer_Click);
             // 
             // buttonRechercher
             // 
@@ -156,27 +159,36 @@
             this.buttonRechercher.TabIndex = 12;
             this.buttonRechercher.Text = "Rechercher";
             this.buttonRechercher.UseVisualStyleBackColor = true;
+            this.buttonRechercher.Click += new System.EventHandler(this.buttonRechercher_Click);
             // 
-            // buttonQuitter
+            // buttonAnnuler
             // 
-            this.buttonQuitter.Location = new System.Drawing.Point(430, 347);
-            this.buttonQuitter.Name = "buttonQuitter";
-            this.buttonQuitter.Size = new System.Drawing.Size(159, 23);
-            this.buttonQuitter.TabIndex = 13;
-            this.buttonQuitter.Text = "Quitter";
-            this.buttonQuitter.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Location = new System.Drawing.Point(430, 339);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(159, 23);
+            this.buttonAnnuler.TabIndex = 13;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // Rechercher
             // 
             this.Rechercher.Controls.Add(this.textBoxCodeRechercher);
             this.Rechercher.Controls.Add(this.label5);
             this.Rechercher.Controls.Add(this.buttonRechercher);
-            this.Rechercher.Location = new System.Drawing.Point(414, 223);
+            this.Rechercher.Location = new System.Drawing.Point(414, 215);
             this.Rechercher.Name = "Rechercher";
             this.Rechercher.Size = new System.Drawing.Size(262, 100);
             this.Rechercher.TabIndex = 14;
             this.Rechercher.TabStop = false;
             this.Rechercher.Text = "Recherche";
+            // 
+            // textBoxCodeRechercher
+            // 
+            this.textBoxCodeRechercher.Location = new System.Drawing.Point(114, 73);
+            this.textBoxCodeRechercher.Name = "textBoxCodeRechercher";
+            this.textBoxCodeRechercher.Size = new System.Drawing.Size(142, 21);
+            this.textBoxCodeRechercher.TabIndex = 14;
             // 
             // label5
             // 
@@ -188,16 +200,9 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Code adherent :";
             // 
-            // textBoxCodeRechercher
-            // 
-            this.textBoxCodeRechercher.Location = new System.Drawing.Point(114, 73);
-            this.textBoxCodeRechercher.Name = "textBoxCodeRechercher";
-            this.textBoxCodeRechercher.Size = new System.Drawing.Size(142, 21);
-            this.textBoxCodeRechercher.TabIndex = 14;
-            // 
             // buttonfirst
             // 
-            this.buttonfirst.Location = new System.Drawing.Point(51, 268);
+            this.buttonfirst.Location = new System.Drawing.Point(51, 260);
             this.buttonfirst.Name = "buttonfirst";
             this.buttonfirst.Size = new System.Drawing.Size(42, 23);
             this.buttonfirst.TabIndex = 15;
@@ -207,7 +212,7 @@
             // 
             // buttonPrevious
             // 
-            this.buttonPrevious.Location = new System.Drawing.Point(115, 268);
+            this.buttonPrevious.Location = new System.Drawing.Point(115, 260);
             this.buttonPrevious.Name = "buttonPrevious";
             this.buttonPrevious.Size = new System.Drawing.Size(42, 23);
             this.buttonPrevious.TabIndex = 16;
@@ -217,7 +222,7 @@
             // 
             // buttonNext
             // 
-            this.buttonNext.Location = new System.Drawing.Point(185, 268);
+            this.buttonNext.Location = new System.Drawing.Point(185, 260);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(42, 23);
             this.buttonNext.TabIndex = 17;
@@ -227,7 +232,7 @@
             // 
             // buttonLast
             // 
-            this.buttonLast.Location = new System.Drawing.Point(252, 268);
+            this.buttonLast.Location = new System.Drawing.Point(252, 260);
             this.buttonLast.Name = "buttonLast";
             this.buttonLast.Size = new System.Drawing.Size(42, 23);
             this.buttonLast.TabIndex = 18;
@@ -235,17 +240,28 @@
             this.buttonLast.UseVisualStyleBackColor = true;
             this.buttonLast.Click += new System.EventHandler(this.buttonLast_Click);
             // 
+            // buttonEnregistrer
+            // 
+            this.buttonEnregistrer.Location = new System.Drawing.Point(51, 334);
+            this.buttonEnregistrer.Name = "buttonEnregistrer";
+            this.buttonEnregistrer.Size = new System.Drawing.Size(282, 28);
+            this.buttonEnregistrer.TabIndex = 19;
+            this.buttonEnregistrer.Text = "Enregistrer vos opérations";
+            this.buttonEnregistrer.UseVisualStyleBackColor = true;
+            this.buttonEnregistrer.Click += new System.EventHandler(this.buttonEnregistrer_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 382);
+            this.ClientSize = new System.Drawing.Size(765, 382);
+            this.Controls.Add(this.buttonEnregistrer);
             this.Controls.Add(this.buttonLast);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
             this.Controls.Add(this.buttonfirst);
             this.Controls.Add(this.Rechercher);
-            this.Controls.Add(this.buttonQuitter);
+            this.Controls.Add(this.buttonAnnuler);
             this.Controls.Add(this.buttonSupprimer);
             this.Controls.Add(this.buttonModifier);
             this.Controls.Add(this.buttonNouveau);
@@ -283,7 +299,7 @@
         private System.Windows.Forms.Button buttonModifier;
         private System.Windows.Forms.Button buttonSupprimer;
         private System.Windows.Forms.Button buttonRechercher;
-        private System.Windows.Forms.Button buttonQuitter;
+        private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.GroupBox Rechercher;
         private System.Windows.Forms.TextBox textBoxCodeRechercher;
         private System.Windows.Forms.Label label5;
@@ -291,5 +307,6 @@
         private System.Windows.Forms.Button buttonPrevious;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonLast;
+        private System.Windows.Forms.Button buttonEnregistrer;
     }
 }

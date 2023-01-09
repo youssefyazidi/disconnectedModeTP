@@ -19,7 +19,7 @@ namespace disconnectedModeTPpartie1
         //le pont : l'adapter
         static  SqlDataAdapter livreAdapter = new SqlDataAdapter();
         static SqlDataAdapter   themeAdapter = new SqlDataAdapter();
-        static SqlDataAdapter adherentAdapter = new SqlDataAdapter();
+        public static SqlDataAdapter adherentAdapter = new SqlDataAdapter();
         public static DataSet getDataSet() 
         {
             if (ds == null)
@@ -38,6 +38,10 @@ namespace disconnectedModeTPpartie1
                 livreAdapter.Fill(ds, "Livre");
                 themeAdapter.Fill(ds, "Theme");
                 adherentAdapter.Fill(ds, "Adherent");
+
+                //generer les requetes de MISE A JOUR
+                SqlCommandBuilder builder = new SqlCommandBuilder(adherentAdapter);
+               
                 //On définit les primary key
                 DataColumn[] cols_L = { ds.Tables["Livre"].Columns["CodeL"] };
                 ds.Tables["Livre"].PrimaryKey = cols_L;
@@ -47,6 +51,8 @@ namespace disconnectedModeTPpartie1
                 DataRelation drel = new DataRelation("Theme-Livre",
                 ds.Tables["Theme"].Columns["CodeTh"],
                 ds.Tables["Livre"].Columns["CodeTh"]);
+
+                ds.Relations.Add(drel);
             }
            return ds;
         }
